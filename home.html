@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>To-Do</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+	<p class="fon">To do </p>
+  <div class="content">
+    <img width="450" height="450" src="{{url_for('static',filename='a1.jpg')}}" />
+    <img width="450" height="450" src="{{url_for('static',filename='a2.jpg')}}" />
+    <img width="450" height="450" src="{{url_for('static',filename='a3.jpg')}}" />
+  </div>
+	<form class="f" action="/add" method="POST">
+      <div class="container">
+          <div class="row">
+             <div class="col col-lg-2">
+                <label class="bon" for="title">Add To-Do</label></br>
+                <input type="text" size="150" class="w3" name="title"/>
+             </div>
+          </div>
+        </br>
+          <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-secondary btn-lg">Add</button>
+            </div>
+          </div>
+      </div>
+  </form>
+  {% for ele in values  %}
+  <div class="yea">
+   <p> {{ele.title}} </p>
+   {% if ele.complete == True %}
+     <p>Complete</p>
+    {% else %}
+     <p>Not Complete</p></div>
+    {% endif %}
+    <span><a href="/update/{{ele.id}}"><button type="button" class="btn btn-success">Update</button></a></span>
+    <span><a href="/delete/{{ele.id}}"><button type="button" class="btn btn-danger">Delete</button></a></span>
+    <hr>
+  {% endfor %}
+</body>
+
