@@ -1,1 +1,57 @@
+body{
+	text-align: center;
+}
+.nav-item{
+	font-family: 'Sacramento', cursive;
+	font-size:2.5em;
+	position:relative;
+	left:300%;
+}
+.fon{
+	font-size:4em;
+	text-align: center;
+    font-family: 'Sacramento', cursive;
+    margin:1px;
+}
 
+.hey{
+	justify-content: center;
+	margin-bottom: 10px;
+}
+.container{
+	justify-content: center;
+	display:flex;
+	background-color:white;
+	flex-direction: column;
+	margin-left: 500px;
+}
+.w3{
+border: 1px solid black;
+margin: 0;
+padding: 0;
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+}
+.bon{
+	color:black;
+	font-family: 'Sacramento', cursive;
+	text-align:center;
+	font-size: 2.5em;
+
+}
+.yea{
+	font-family: 'Sacramento', cursive;
+	text-align:center;
+	font-size: 2.5em;
+
+}
+.content{
+	justify-content:space-between;
+	display: flex;
+	padding:20px;
+	background-image:url('s1.jpg');
+	margin-left:50px;
+	margin-right:50px;
+	margin-bottom:50px;
+}
